@@ -1,16 +1,12 @@
+YAML
 name: Daily Video Workflow
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 6 * * *"
-
-permissions:
-  contents: read
 
 jobs:
-  daily-check:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - name: Confirm scheduled workflow
-        run: echo "Daily workflow is running."
+      - name: Test workflow
+        run: echo "Workflow is working!"
