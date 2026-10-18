@@ -1,0 +1,16 @@
+name: Daily Video Workflow
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  daily-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Confirm scheduled workflow
+        run: echo "Daily workflow is running."
